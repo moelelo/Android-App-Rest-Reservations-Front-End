@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent"
+	android:layout_width="fill_parent"
+	android:background="@color/background" >
+	<RelativeLayout 
+        android:id="@+id/lytTitlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/titlebar_background"
+        android:layout_alignParentTop="true">
+        <ImageButton 
+            android:id="@+id/imgNavBack"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/nav_back"
+            android:background="@drawable/button_top_style_1"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+        <TextView 
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:text="@string/detail"
+            android:shadowColor="@color/shadow"
+	        android:shadowDx="1.0"
+	        android:shadowDy="1.0"
+	        android:shadowRadius="1.0"
+	        android:layout_toRightOf="@+id/imgNavBack"
+	        android:layout_centerVertical="true"/>
+        <ImageButton
+            android:id="@+id/imgShare"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/share"
+            android:background="@drawable/button_top_style_2"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <ProgressBar 
+	    android:id="@+id/prgPageLoading"
+	    android:layout_width="fill_parent"
+	    android:layout_height="8dp"
+        android:layout_below="@+id/lytTitlebar"
+	    style="@android:style/Widget.ProgressBar.Horizontal"
+	    android:progressDrawable="@drawable/loading_url"
+	    android:visibility="gone"/>
+	<WebView
+	    android:id="@+id/web"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:scrollbars="none"
+	    android:scrollbarStyle="insideInset"
+        android:layout_below="@+id/prgPageLoading"/>
+	
+	
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        
+        <PreferenceCategory 
+            android:key="preferences_category" 
+            android:title="@string/accounts">
+            <CheckBoxPreference 
+	            android:key="facebook"
+	            android:title="@string/login_facebook" 
+	            android:defaultValue="false" />
+            
+            <CheckBoxPreference 
+	            android:key="twitter"
+	            android:title="@string/login_twitter" 
+	            android:defaultValue="false" />
+            
+        </PreferenceCategory>
+    </PreferenceScreen>
